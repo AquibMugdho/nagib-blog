@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {getDocs, collection} from 'firebase/firestore'
 import {db} from '../firebase'
-
+import '../App.css';
 
 function Blogs() {
   const [postLists, setPostList] = useState([])
@@ -18,12 +18,13 @@ function Blogs() {
 
     
     <div className='blogs'>
-      <div class="main-title">
-        <h2>Right Hemisphere <span>Materials</span><span class="bg-text">Blogs</span></h2>
+      <div className="main-title">
+        <h2>Right Hemisphere <span>Materials</span><span className="bg-text">Blogs</span></h2>
       </div>
       
-      <div className='blog'>
-      <div class="h-shape"></div>
+      
+      <div className="h-shape"></div>
+      <div className="blogContainer">
         {postLists.map((post) =>{
           return ( 
            <div className='posts'> 
@@ -35,8 +36,9 @@ function Blogs() {
               </div>
           </div> 
           <div className='postTextContainer'>{post.postText}</div>
-          <img>{post.imageLink}</img>
+          <img src={post.imageLink} />
           <h3>@{post.author.name}</h3>
+          
           </div>
            
            

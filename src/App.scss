@@ -288,7 +288,84 @@ a{
   clip-path: circle(40% at 12% 11%);
 }
 
+
+
+
 .blogs{
+  .blogContainer{ width: 100%;
+    min-height: calc(100vh - 80px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    color: var(--color-primary);
+  .posts{
+    width: 600px;
+  height: auto;
+  max-height: 600px;
+  background-color: var(--color-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  
+  img{
+    opacity: .4;
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin-left: 360px;
+    position: relative;
+    top: 50%;
+    left: -150%;
+    transition: var(--transition-delay);
+    &:hover{
+      opacity: 1;
+      transition: var(--transition-delay);
+    }
+    
+  }
+  
+  }
+  .postheader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .title {
+      cite{
+      text-transform: uppercase;
+      flex: 50%;
+      font-size: 1.5rem;
+    }
+    }
+  }
+  
+  .deletePost {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .deletePost  {
+    button{
+    border: none;
+  
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  }
+  .postTextContainer {
+    word-wrap: break-word;
+    height: auto;
+    max-height: 400px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
   //bigtext
 .main-title{
   margin-top: 30px;
@@ -313,22 +390,15 @@ a{
       font-size: 6.3rem;
     }
   }
+
+
+ 
 }
-  .blog{
-    .posts{
-      .postheader{
-        .title{
-            cite {
-              display: block;
-              margin-bottom: 1rem;
-              font-size: 2rem;
-              text-transform: uppercase;
-              letter-spacing: 2.5px;
+
+  
 }
-}
-}
-}
-}
-}
+
+
+
 
 

@@ -1,6 +1,6 @@
 import Login from './Container/Login/login';
 import { Route, Routes, Link } from 'react-router-dom';
-import Signup from './Container/Signup/signup';
+
 import Dashboard from './Container/Dashboard/dashboard';
 import './App.css';
 import Blogs from './pages/Blogs';
@@ -24,11 +24,7 @@ function App() {
           </Link>
          
 
-         <Link to='/login'>
-           <div class="control">
-              <i class="fas fa-fingerprint"></i>
-            </div>
-          </Link> 
+         
         </div> 
         
       </nav>
@@ -36,7 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/dash' element={<Dashboard />} />
         <Route path='/login' element={<Login />} />
-        <Route path='signup' element={<Signup/>} />
+        
         <Route path="/blogs" element={<Blogs />} />
       </Routes>
      

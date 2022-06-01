@@ -337,7 +337,109 @@ a {
           clip-path: circle(40% at 12% 11%);
 }
 
+.blogs .blogContainer {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  color: var(--color-primary);
+}
+
+.blogs .blogContainer .posts {
+  width: 600px;
+  height: auto;
+  max-height: 600px;
+  background-color: var(--color-white);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.blogs .blogContainer .posts img {
+  opacity: .4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  margin-left: 360px;
+  position: relative;
+  top: 50%;
+  left: -150%;
+  -webkit-transition: var(--transition-delay);
+  transition: var(--transition-delay);
+}
+
+.blogs .blogContainer .posts img:hover {
+  opacity: 1;
+  -webkit-transition: var(--transition-delay);
+  transition: var(--transition-delay);
+}
+
+.blogs .blogContainer .postheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.blogs .blogContainer .postheader .title cite {
+  text-transform: uppercase;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  font-size: 1.5rem;
+}
+
+.blogs .blogContainer .deletePost {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.blogs .blogContainer .deletePost button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.blogs .blogContainer .postTextContainer {
+  word-wrap: break-word;
+  height: auto;
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 .blogs .main-title {
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -364,13 +466,5 @@ a {
           transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
-}
-
-.blogs .blog .posts .postheader .title cite {
-  display: block;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
 }
 /*# sourceMappingURL=App.css.map */

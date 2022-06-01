@@ -60,7 +60,7 @@ export default function Dashboard() {
 
               <div className='inputGp'>
               <label> Image Link: </label>
-              <textarea placeholder='https://.....' onChange={(event)=> {setImageLink(event.target.value)}} />
+              <textarea placeholder='paste image link' onChange={(event)=> {setImageLink(event.target.value)}} />
               </div>
                 
               <div className='inputGp'>
